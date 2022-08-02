@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       <div>
         <Switch>
-          <Route path="/" component={ Login } />
+          <Route exact path="/" component={ Login } />
           <Route path="/carteira" component={ Wallet } />
         </Switch>
       </div>
