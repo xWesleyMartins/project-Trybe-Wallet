@@ -3,7 +3,7 @@ export const USER = 'USER';
 export const CURR_INFOS = 'CURR_INFOS'; //  OBS: Curr = Currencies or Currency
 export const CURR_DATA = 'CURR_DATA';
 export const EXPENSES = 'EXPENSES_INFOS';
-
+export const REMOVE_EXPENSE = 'REMOVE_EXPENSE';
 export const addLoginUser = (payload) => ({
   type: USER,
   payload,
@@ -21,6 +21,10 @@ const currencyData = (payload) => ({
 
 export const currExpenses = (expenses) => ({ type: 'EXPENSES_INFOS',
   expenses,
+});
+
+export const removExpenses = (removeExpense) => ({ type: 'REMOVE_EXPENSE',
+  removeExpense,
 });
 
 export const currencyAPI = () => async (dispatch) => {

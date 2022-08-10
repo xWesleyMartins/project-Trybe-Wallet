@@ -15,6 +15,13 @@ const wallet = (state = INITIAL_STATE, action) => {
 
   case 'CURR_DATA': return { ...state, data: action.data };
 
+  case 'REMOVE_EXPENSE':
+    return {
+      ...state,
+      expenses: [...state.expenses]
+        .filter((expense) => expense
+          .id !== action.removeExpense.id) };
+
   default: return state;
   }
 };
