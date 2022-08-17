@@ -39,6 +39,7 @@ describe('Login Test', () => {
     userEvent.type(inputEmail, 'teste@test.com')
     userEvent.type(inputPass, '123456')
     expect(loginBTN).toBeEnabled();
+    
     userEvent.type(inputEmail, 'teste@test.com')
     userEvent.type(inputPass, '123456')
     userEvent.click(loginBTN)

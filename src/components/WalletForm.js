@@ -51,6 +51,7 @@ render() {
       WalletForm
       <form>
         <label htmlFor="value-input">
+          Valor
           <input
             data-testid="value-input"
             type="text"
@@ -60,6 +61,7 @@ render() {
           />
         </label>
         <label htmlFor="description-input">
+          Descrição
           <input
             data-testid="description-input"
             type="textarea"
@@ -69,6 +71,7 @@ render() {
           />
         </label>
         <label htmlFor="currency-input">
+          Moeda
           <select
             id="currency"
             data-testid="currency-input"
@@ -78,7 +81,12 @@ render() {
             onChange={ this.handleChange }
           >
             { currencies.map((currencyParam) => (
-              <option key={ currencyParam }>{ currencyParam }</option>
+              <option
+                value={ currencyParam }
+                key={ currencyParam }
+              >
+                { currencyParam }
+              </option>
             ))}
           </select>
         </label>
@@ -89,9 +97,9 @@ render() {
             value={ method }
             onChange={ this.handleChange }
           >
-            <option>Dinheiro</option>
-            <option>Cartão de crédito</option>
-            <option>Cartão de débito</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Cartão de crédito">Cartão de crédito</option>
+            <option value="Cartão de débito">Cartão de débito</option>
           </select>
         </label>
         <label htmlFor="tag-input">
@@ -101,11 +109,11 @@ render() {
             value={ tag }
             onChange={ this.handleChange }
           >
-            <option>Alimentação</option>
-            <option>Lazer</option>
-            <option>Trabalho</option>
-            <option>Transporte</option>
-            <option>Saúde</option>
+            <option value="Alimentação">Alimentação</option>
+            <option value="Lazer">Lazer</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Saúde">Saúde</option>
           </select>
         </label>
         <button
