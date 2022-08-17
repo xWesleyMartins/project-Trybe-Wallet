@@ -73,7 +73,7 @@ render() {
         <label htmlFor="currency-input">
           Moeda
           <select
-            id="currency"
+            id="currency-input"
             data-testid="currency-input"
             type="text"
             name="currency"
@@ -93,6 +93,7 @@ render() {
         <label htmlFor="method-input">
           <select
             data-testid="method-input"
+            id="method-input"
             name="method"
             value={ method }
             onChange={ this.handleChange }
@@ -105,6 +106,7 @@ render() {
         <label htmlFor="tag-input">
           <select
             data-testid="tag-input"
+            id="tag-input"
             name="tag"
             value={ tag }
             onChange={ this.handleChange }
